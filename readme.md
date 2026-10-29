@@ -14,6 +14,15 @@
 
 ---
 
+## 包含的 Skill
+
+| Skill | 干什么 | 什么时候用 |
+|---|---|---|
+| [resume-master](skills/resume-master/SKILL.md) | 访谈式挖经历，写 HTML 简历，导出恰好一页的 PDF | 写简历、改简历、按 JD 定制 |
+| [backend-grilling](skills/backend-grilling/SKILL.md) | 模拟大厂后端技术面，一次一题连环追问，最后给评分卡 | 面试前拷打、查漏补缺、复盘 |
+
+---
+
 ## 你大概遇到过这些
 
 | 你说 | 常见的 AI 简历工具 | 这个 Skill |

@@ -1,0 +1,7 @@
+interface:
+  display_name: "后端面试拷打"
+  short_description: "模拟大厂后端技术面，连环追问项目、基础与线上场景题"
+  default_prompt: "Use $backend-grilling to grill me with a realistic backend interview, one question at a time."
+
+policy:
+  allow_implicit_invocation: true
