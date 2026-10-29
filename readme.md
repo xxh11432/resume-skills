@@ -6,7 +6,7 @@
 
 不是"生成一份简历"，而是有人陪你把经历挖出来、组织好、排到恰好一页。
 
-[![Stars](https://img.shields.io/github/stars/wangyafu/resume-skills?style=flat-square&color=e05d44)](https://github.com/wangyafu/resume-skills/stargazers)
+[![Stars](https://img.shields.io/github/stars/xxh11432/resume-skills?style=flat-square&color=e05d44)](https://github.com/xxh11432/resume-skills/stargazers)
 [![Skill](https://img.shields.io/badge/type-Agent%20Skill-8957e5?style=flat-square)](skills/resume-master/SKILL.md)
 [![HTML](https://img.shields.io/badge/output-HTML%20%E2%86%92%20PDF-2ea44f?style=flat-square)](#为什么是-html)
 
@@ -46,7 +46,7 @@
 把这个链接甩给你的 Agent：
 
 ```
-https://github.com/wangyafu/resume-skills
+https://github.com/xxh11432/resume-skills
 帮我安装这个简历 skill，并安装所需的 python 依赖
 ```
 
@@ -174,7 +174,7 @@ skills/resume-master/
 - 你写简历总结出的经验
 - 你对「什么是好简历」的认知
 
-提 Issue、发 PR，或者在小红书上找我：[Wonderful王](https://www.xiaohongshu.com/user/profile/635f85b8000000001901fe43)
+提 Issue、发 PR，一起把它做得更好。
 
 ---
 
