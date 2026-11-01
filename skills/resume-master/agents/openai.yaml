@@ -1,7 +1,7 @@
 interface:
   display_name: "简历工作台"
-  short_description: "直接编写或按JD定制可编辑HTML简历，并导出可打印PDF文件"
-  default_prompt: "Use $resume-master to create or tailor my resume as editable HTML and export a printable PDF."
+  short_description: "读取项目、文档与 GitHub 仓库，提炼亮点并生成后端 / 全栈 / Agent 三岗位简历与 PDF"
+  default_prompt: "Use $resume-master to read my project materials, extract highlights, and generate backend, fullstack, and agent resume versions as editable HTML with printable PDFs."
 
 policy:
   allow_implicit_invocation: true

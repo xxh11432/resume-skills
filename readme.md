@@ -4,7 +4,7 @@
 
 **把你的 Agent 变成简历导师，交付一份能打的 PDF。**
 
-不是"生成一份简历"，而是有人陪你把经历挖出来、组织好、排到恰好一页。
+不是"生成一份简历"，而是有人陪你把经历挖出来、组织好、排到恰好一页。它也能直接读你的项目目录、文档和 GitHub 仓库，按**后端 / 全栈 / Agent** 三个岗位出三版。
 
 [![Stars](https://img.shields.io/github/stars/xxh11432/resume-skills?style=flat-square&color=e05d44)](https://github.com/xxh11432/resume-skills/stargazers)
 [![Skill](https://img.shields.io/badge/type-Agent%20Skill-8957e5?style=flat-square)](skills/resume-master/SKILL.md)
@@ -18,7 +18,7 @@
 
 | Skill | 干什么 | 什么时候用 |
 |---|---|---|
-| [resume-master](skills/resume-master/SKILL.md) | 访谈式挖经历，写 HTML 简历，导出恰好一页的 PDF | 写简历、改简历、按 JD 定制 |
+| [resume-master](skills/resume-master/SKILL.md) | 访谈 + 材料直读，提炼项目亮点，写 HTML 简历，导出恰好一页的 PDF；支持后端 / 全栈 / Agent 三岗位版本 | 写简历、改简历、按 JD 定制、读项目仓库出多版 |
 | [backend-grilling](skills/backend-grilling/SKILL.md) | 模拟大厂后端技术面，一次一题连环追问，最后给评分卡 | 面试前拷打、查漏补缺、复盘 |
 
 ---
@@ -31,6 +31,7 @@
 | 「这行太挤了」 | 重新生成一份完全不同的 | 改一个数值，3 秒重出 PDF |
 | 「保持我原来的样子」 | 把你塞进它的模板里 | 拆图看懂你的排版，再动手 |
 | 「我要一页」 | 说"好的"，然后给你两页 | 每改一次就数一次页数 |
+| 「我只有一个项目仓库」 | 让你自己总结项目亮点 | 读代码与 README，按岗位挖出不同亮点 |
 
 ---
 
@@ -50,6 +51,25 @@
 
 ---
 
+## 一个项目，三种讲法
+
+同一份经历，不是换几个关键词就能投三个岗位。
+
+| 维度 | 后端开发 | 全栈开发 | Agent 开发 |
+|---|---|---|---|
+| 第一眼证明 | 正确性、稳定性、性能 | 能独立端到端交付 | 能把 LLM 做成可上线、可评估的产品 |
+| 项目重心 | 一致性、并发、缓存、故障处理 | 需求 → 界面 → 接口 → 数据 → 上线 | 检索 / 工具调用、评估、成本、失败兜底 |
+| 技能前置 | 语言框架 → 中间件 → 可观测性 | 前端 → 后端 → 数据库 / 部署 | Python / LLM → 检索 → 评估 / 观测 |
+
+它会先建一份**证据台账**：每条事实都标清来源、置信度和是否需要你确认。仓库只能证明代码怎么写，不能证明哪部分是你写的——所以它会先问你负责哪块，再动笔。
+
+```
+这是我的项目目录（或 GitHub 链接），
+帮我提炼项目亮点，分别生成后端开发、全栈开发、Agent 开发三版简历。
+```
+
+---
+
 ## 三十秒装好
 
 把这个链接甩给你的 Agent：
@@ -59,7 +79,7 @@ https://github.com/xxh11432/resume-skills
 帮我安装这个简历 skill，并安装所需的 python 依赖
 ```
 
-完事。然后跟它说「帮我写份简历」或者「读一下我这份旧简历」。
+完事。然后跟它说「帮我写份简历」「读一下我这份旧简历」，或者直接把项目目录 / GitHub 链接丢给它。
 
 <details>
 <summary>手动安装 / 环境要求</summary>
@@ -78,7 +98,7 @@ https://github.com/xxh11432/resume-skills
 pip install pymupdf pypdf   # PDF 拆图与页数统计
 ```
 
-PDF 拆图也可使用 Poppler 的 `pdftoppm` 或 ImageMagick 替代。导出 PDF 需要本机装有 **Google Chrome**（脚本会自动找）；找不到时会提示你手动用浏览器打印，不会卡住流程。
+PDF 拆图也可使用 Poppler 的 `pdftoppm` 或 ImageMagick 替代。导出 PDF 需要本机装有 **Google Chrome**（脚本会自动找）；找不到时会提示你手动用浏览器打印，不会卡住流程。`project_snapshot.py` 只用 Python 标准库，无需额外依赖。
 
 </details>
 
@@ -138,12 +158,13 @@ PDF 拆图也可使用 Poppler 的 `pdftoppm` 或 ImageMagick 替代。导出 PD
 
 ---
 
-## 三种用法
+## 四种用法
 
 | 场景 | 它会做什么 |
 |---|---|
 | **从零开始** | 先问你想要哪套模板 → 访谈式挖经历 → 边聊边出 HTML → 确认后编译 PDF |
 | **改旧简历** | 拆图读懂旧简历（内容 + 排版）→ 分析 JD → 决定就地编辑还是重写 → 编译 |
+| **项目材料直读** | 读目录 / 文档 / GitHub 仓库 → 建证据台账 → 提炼亮点 → 出后端 / 全栈 / Agent 三版 → 编译 |
 | **只做导出** | `python scripts/render_pdf.py --in <path> --out <name>.pdf --paper A4` |
 
 ---
@@ -152,25 +173,33 @@ PDF 拆图也可使用 Poppler 的 `pdftoppm` 或 ImageMagick 替代。导出 PD
 
 ```
 skills/resume-master/
-├── SKILL.md                    # 简历写作规范 + 访谈原则 + 三条工作流
+├── SKILL.md                    # 简历写作规范 + 事实边界 + 四条工作流
+├── references/
+│   ├── material-intake.md      # 文件 / 项目目录 / GitHub 仓库怎么读，证据台账怎么建
+│   ├── project-highlights.md   # 项目亮点提炼 + 同一项目跨岗位映射
+│   └── roles/
+│       ├── backend.md          # 后端开发岗的信号、顺序、句式、误区
+│       ├── fullstack.md        # 全栈开发岗
+│       └── agent.md            # Agent 开发岗
 ├── assets/template_refs/
 │   ├── html/                   # 两套模板，给 AI 读
 │   ├── images/                 # 两套模板，给你挑
 │   └── pdf/                    # 两套模板，看实际打印效果
 └── scripts/
+    ├── project_snapshot.py     # 项目目录 → 关键文件、技术栈、代码规模、git 信息
     ├── render_pdf.py           # HTML → PDF，不带页眉页脚时间戳
     ├── pdf_to_images.py        # PDF → 图片，让 AI 看见排版
     └── pdf_page_count.py       # 数页数，死守一页
 ```
 
-一段 prompt，两套模板，三个脚本。
+一套方法论，两套模板，四个脚本。
 
 ---
 
 ## 后续计划
 
+- [x] 分行业、分岗位的指导文件（后端 / 全栈 / Agent）
 - [ ] 更多模板
-- [ ] 分行业、分岗位的指导文件
 - [ ] 更狠的经历深挖：让它主动发现「这段经历你写漏了什么」
 
 ---

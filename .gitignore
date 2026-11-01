@@ -1,3 +1,5 @@
 work/
 .tmp/
 output/
+__pycache__/
+*.pyc
