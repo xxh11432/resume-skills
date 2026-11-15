@@ -1,0 +1,7 @@
+interface:
+  display_name: "全栈面试拷打"
+  short_description: "模拟大厂全栈开发岗技术面，连环追问端到端交付、接口、数据与上线"
+  default_prompt: "Use $fullstack-grilling to grill me with a realistic full-stack interview, one question at a time."
+
+policy:
+  allow_implicit_invocation: true

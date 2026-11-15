@@ -19,7 +19,9 @@
 | Skill | 干什么 | 什么时候用 |
 |---|---|---|
 | [resume-master](skills/resume-master/SKILL.md) | 访谈 + 材料直读，提炼项目亮点，写 HTML 简历，导出恰好一页的 PDF；支持后端 / 全栈 / Agent 三岗位版本 | 写简历、改简历、按 JD 定制、读项目仓库出多版 |
-| [backend-grilling](skills/backend-grilling/SKILL.md) | 模拟大厂后端技术面，一次一题连环追问，最后给评分卡 | 面试前拷打、查漏补缺、复盘 |
+| [backend-grilling](skills/backend-grilling/SKILL.md) | 模拟大厂后端技术面，一次一题连环追问，最后给评分卡 | 后端岗面试前拷打、查漏补缺、复盘 |
+| [fullstack-grilling](skills/fullstack-grilling/SKILL.md) | 模拟大厂全栈开发岗技术面，围绕端到端交付、接口契约、数据与上线连环追问 | 全栈岗面试前拷打、查漏补缺、复盘 |
+| [agent-grilling](skills/agent-grilling/SKILL.md) | 模拟大厂 Agent / LLM 应用岗技术面，围绕 RAG、工具调用、评估与成本连环追问 | Agent 岗面试前拷打、查漏补缺、复盘 |
 
 ---
 

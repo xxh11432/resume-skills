@@ -1,0 +1,7 @@
+interface:
+  display_name: "Agent 面试拷打"
+  short_description: "模拟大厂 Agent / LLM 应用岗技术面，连环追问 RAG、工具调用、评估与成本"
+  default_prompt: "Use $agent-grilling to grill me with a realistic Agent / LLM application interview, one question at a time."
+
+policy:
+  allow_implicit_invocation: true
